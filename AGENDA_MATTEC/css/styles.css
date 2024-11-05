@@ -1,0 +1,108 @@
+/* body {
+    background-color: #333 ;
+} */
+
+.navbar-brand img { 
+    width: 100px;
+}
+
+#main-title {
+
+    text-align: center;
+    margin: 15px 0 30px;
+
+}
+/* Header*/
+
+#contacts-table {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#contacts-table thead {
+    background-color: #007bff;
+    color: #fff;
+
+
+}
+.actions i {
+    text-align: right;
+    margin-right: 5px;
+}
+.check-icon {
+    color: #155724;
+  
+}
+.edit-icon {
+    color: #007bff;
+    
+}
+
+.delete-form {
+    display: inline;
+}
+
+.delete-icon {
+    color: #bd2130;    
+}
+
+.delete-btn {
+    background-color:transparent;
+    border: none;
+    padding: 0;
+
+}
+
+#empty-list-test {
+    text-align: center;
+}
+
+#msg {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+    padding: 10px;
+    text-align: center;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+/* show the contact form */
+#view-contact-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+.bold {
+    font-weight: bold;
+}
+
+#back-link-container {
+    display: block;
+    width: 500px;
+    margin: 30px auto 0;
+}
+
+#back-link {
+    border: 1px solid #007bff;
+    color: #007bff;
+    border-radius: 4px;
+    padding: 5px;
+    text-decoration: none;
+}
+
+#back-link:hover {
+    text-decoration: none;
+}
+/* create data source*/
+#create-form,
+#edit-form {    
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+@media (max-width: 480px) {
+
+    #home-link {
+        display: none;
+    }
+}
