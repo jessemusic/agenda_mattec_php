@@ -26,7 +26,6 @@
                           <td scope="row"><?= $contact['name'] ?></td>
                           <td scope="row"><?= $contact['phone'] ?></td>
                           <td scope="row"><?= $contact['subject'] ?></td>
-                          <td scope="row"><?= $contact['observations'] ?></td>
                           <td class ="actions">
                             <a href="<?= $BASE_URL ?>show.php?id=<?=$contact['id']?>"><i class="fas fa-eye check-icon"></i></a>
                             <a href="<?= $BASE_URL ?>edit.php?id=<?=$contact['id']?>"><i class="far fa-edit edit-icon"></i></a>

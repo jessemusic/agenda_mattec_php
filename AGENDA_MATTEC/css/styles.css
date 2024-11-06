@@ -39,7 +39,7 @@
 }
 
 .delete-form {
-    display: inline;
+    display: inline-block;
 }
 
 .delete-icon {

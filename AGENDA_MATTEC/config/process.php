@@ -56,6 +56,21 @@
                         echo "Update failed: ". $error;
                         }
 
+        } else if ($data['type'] === 'delete'){
+            $id = $data['id'];
+            $query = "DELETE FROM $table WHERE id = :id";
+            $stmt = $conn->prepare($query);
+            $stmt->bindParam(':id', $id);
+            
+                         // Create connection
+                         try{
+                            $stmt->execute();
+                            $_SESSION["msg"] = "Contato deletado com sucesso!";
+                        }catch (PDOException $e){
+                        $error = $e->getMessage();
+                        echo "delete failed: ". $error;
+                        }
+
         }
         header("Location:" . $BASE_URL . "../index.php");
 
