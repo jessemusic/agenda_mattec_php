@@ -1,11 +1,25 @@
 <?php
+    // Inicia a sessão somente se ela ainda não estiver ativa
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
+    }
+
+
+
     include_once("templates/header.php");
+
+    // Verifica se a mensagem foi definida e a exibe
+    if (isset($_SESSION["msg"]) && $_SESSION["msg"] != '') {
+        $printMsg = $_SESSION["msg"];
+        // Após exibir a mensagem, remove ela da sessão para que não apareça novamente
+        unset($_SESSION["msg"]);
+    }
 ?>
 
+
+
     <div class="container">
-        <?php if(isset($printMsg) && $printMsg !='') : ?>
-            <p id="msg"><?= $printMsg ?></p>
-        <?php endif; ?>
+            <?php include("templates/show_message.php"); ?>
         <h1 id="main-title">Minha agenda</h1>
         
         <?php if(count($contacts) > 0): ?>
@@ -32,6 +46,7 @@
                             <form class="delete-form" action="<?= $BASE_URL ?>/config/process.php" method="POST" >
                               <input type="hidden" name="type" value="delete">
                               <input type="hidden" name="id" value ="<?= $contact['id'] ?>">
+                              <input type="hidden" name="name" value="<?= $contact['name'] ?>"> 
                               <button type="submit" class="delete-btn" onclick="return confirm('Tem certeza que deseja excluir esse contato --> <?=$contact['name']?>?')"><i class="fas fa-trash delete-icon"></i></button>
                             </form>
                           </td>
